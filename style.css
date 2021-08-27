@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;700&display=swap');
+
+* {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background:  #373737;
+}
+.wrapper  {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+.wrapper h3 {
+  position: relative;
+  font-size: 20px;
+  color: #f9f9f9;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+#form  {
+  position: relative;
+}
+#form #user_name,
+#form #user_phone,
+#form #user_email {
+  width: 300px;
+  background: #292929;
+  outline: none;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+#form #user_email {
+  margin-bottom: 0;
+}
+#form #button {
+  width: 300px;
+  height: 36px;
+  line-height: 36px;
+  padding: 0;
+  border-radius: 6px;
+  border: none;
+  background: #f9f9f9;
+  font-weight: 700;
+  color: #292929;
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.6);
+  transition: all 450ms ease 0ms;
+  cursor: pointer;
+}
+#form #button:hover {
+  background: #5a5a5a;
+  color: #fff;
+  letter-spacing: 0.06rem;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.8);
+}
+#form.invalid #button {
+  cursor: wait;
+  background: #f9f9f9;
+  color: #5a5a5a;
+}
+#form.invalid #button:hover {
+  letter-spacing: 0rem;
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.6);
+}
+#form .input-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 300px;
+}
+#text {
+  display: inline-block;
+  color: #000;
+  font-weight: 200;
+  padding: 5px;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+#form.valid .input-box:nth-child(3):before {
+  content: '';
+  position: absolute;
+  right: 12px;
+  top: 9px;
+  width: 24px;
+  height: 24px;
+  background: url(./valid.png);
+  background-size: cover;
+  z-index: 10;
+}
+#form.invalid .input-box:nth-child(3):before {
+  content: '';
+  position: absolute;
+  right: 12px;
+  top: 9px;
+  width: 24px;
+  height: 24px;
+  background: url(./invalid.png);
+  background-size: cover;
+  z-index: 10;
+}
